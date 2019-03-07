@@ -1,11 +1,11 @@
 # Site settings
-title: "Hofstra Digital Research Center: Mapping the Plague"
-email: drc@hofstra.edu
+title: "Itinerary: Interactive Historical Maps and Timelines"
+email: mjr@clearbold.com
 description: ""
 baseurl: ""
-url: "http://hofstradrc.org"
+url: "https://clearbold.com/itinerary"
 twitter_username:
-github_username:  hofstra
+github_username:  clearbold
 
 # Where things are
 destination:      ./_site
