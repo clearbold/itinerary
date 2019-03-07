@@ -1,0 +1,7 @@
+page-nav,link-name,link-href
+"home","Home",/itinerary/
+"map-plague","Map: &ldquo;A Frightful Number!&rdquo;",/itinerary/plague-year/
+"about-a-frightful-number","About &ldquo;A Frightful Number!&rdquo;",/itinerary/plague-year/about/
+"map-melville-rome","Map: Melville in Rome",/itinerary/melville-in-rome/
+"videos","Watch the Videos",/itinerary/videos/
+"github","Fork the Codebase",https://github.com/clearbold/itinerary#fork-destination-box

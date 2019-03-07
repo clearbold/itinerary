@@ -1,0 +1,14 @@
+    <div class="logo-header-wrapper"><div class="logo-header">
+        <span>Developed by <a href="https://clearbold.com">Clearbold</a> for</span>
+        The Digital Research Center at Hofstra
+        {% comment %}<img src="/itinerary/ui/img/drc.pl.itinerary.png" width="247" height="43" alt="Digital Research Center at Hofstra" />{% endcomment %}
+    </div></div>
+    <div class="wrapper">
+        <h1>{{ page.page_title }}</h1>
+
+        <div class="nav">
+            {% for link in site.data.nav %}
+            <a href="{{ link.link-href }}"{% if link.page-nav == page.page_nav %} class="active"{% endif %}>{{ link.link-name }}</a>
+            {% endfor %}
+        </div>
+    </div>

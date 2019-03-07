@@ -1,0 +1,25 @@
+# Site settings
+title: "Hofstra Digital Research Center: Mapping the Plague"
+email: drc@hofstra.edu
+description: ""
+baseurl: ""
+url: "http://hofstradrc.org"
+twitter_username:
+github_username:  hofstra
+
+# Where things are
+destination:      ./_site
+# source:           ./_source
+
+
+# Handling Reading
+exclude:          ["templates", "Gemfile", "Gemfile.lock", "README.md", ".gitignore"]
+
+# Conversion
+markdown: kramdown
+
+# Compensating for gh-pages project site
+baseurl: /itinerary
+# https://github.com/jekyll/jekyll/issues/332
+
+asset_url: https://hofstra.github.io/design-framework

@@ -1,0 +1,28 @@
+---
+---
+{
+    "events":
+    [
+    {% assign events = site.data.a-frightful-number-plague | group_by:"date_year" %}
+    {% for year in events %}
+    {% for event in year.items %}
+    {
+        "year" : "{{ year.name }}",
+        "sequence" : "{{ event.sequence }}",
+        "date_descriptive" : "{{ event.date_descriptive }}",
+        "parish_id" : "{{ event.parish_id }}",
+        "parish" : "{{ event.parish }}",
+        "buried_plague" : "{{ event.buried_plague }}",
+        "buried_parish_total" : "{{ event.buried_parish_total }}",
+        "buried_plague_total" : "{{ event.buried_plague_total }}",
+        "buried_total" : "{{ event.buried_total }}",
+        "location_descriptive" : "{{ event.location_descriptive | strip_newlines | replace: nil, nil | replace: '"', '\"' }}",
+        "location_latitude" : "{{ event.location_latitude }}",
+        "location_longitude" : "{{ event.location_longitude }}",
+        "notes" : "{{ event.notes | strip_newlines | replace: nil, nil | replace: '"', '\"' }}",
+        "content" : "{% if event.location_descriptive != nil and event.parish==nil %}<h3>{{ event.location_descriptive }}</h3>{% endif %}<p>{% if event.date_descriptive != nil %}{{ event.date_descriptive }}<br />{% endif %}{% if event.buried_parish_total != nil %}<span style='color: #d31603;'>Buried Parish: {{ event.buried_parish_total }}</span><br />{% endif %}{% if event.buried_total != nil %}<span style='color: #d31603;'>Buried Total: {{ event.buried_total }}</span><br />{% endif %}{% if event.notes != nil %}{{ event.notes | strip_newlines | replace: nil, nil | replace: '"', '\"'  }}{% endif %}</p>"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ]
+}
